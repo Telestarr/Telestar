@@ -38,13 +38,13 @@ orders = {}
 waiting_username = {}
 
 PACKS = {
-    "50": ("50 звёзд", "60 грн"),
-    "100": ("100 звёзд", "90 грн"),
-    "200": ("200 звёзд", "190 грн"),
-    "500": ("500 звёзд", "450 грн"),
-    "1000": ("1000 звёзд", "900 грн"),
-    "2000": ("2000 звёзд", "1800 грн"),
-    "5000": ("5000 звёзд", "4250 грн"),
+    "50": ("50 звёзд", "50 грн"),
+    "100": ("100 звёзд", "95 грн"),
+    "200": ("200 звёзд", "185 грн"),
+    "500": ("500 звёзд", "460 грн"),
+    "1000": ("1000 звёзд", "899 грн"),
+    "2000": ("2000 звёзд", "1750 грн"),
+    "5000": ("5000 звёзд", "4300 грн"),
     "10000": ("10000 звёзд", "8500 грн"),
 }
 
@@ -80,13 +80,13 @@ async def back(call: CallbackQuery):
 @dp.callback_query(F.data == "buy_stars")
 async def buy_stars(call: CallbackQuery):
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="50 звёзд — 60 грн", callback_data="pack_50")],
-        [InlineKeyboardButton(text="100 звёзд — 90 грн", callback_data="pack_100")],
-        [InlineKeyboardButton(text="200 звёзд — 190 грн", callback_data="pack_200")],
-        [InlineKeyboardButton(text="500 звёзд — 450 грн", callback_data="pack_500")],
-        [InlineKeyboardButton(text="1000 звёзд — 900 грн", callback_data="pack_1000")],
-        [InlineKeyboardButton(text="2000 звёзд — 1800 грн", callback_data="pack_2000")],
-        [InlineKeyboardButton(text="5000 звёзд — 4250 грн", callback_data="pack_5000")],
+        [InlineKeyboardButton(text="50 звёзд — 50 грн", callback_data="pack_50")],
+        [InlineKeyboardButton(text="100 звёзд — 95 грн", callback_data="pack_100")],
+        [InlineKeyboardButton(text="200 звёзд — 185 грн", callback_data="pack_200")],
+        [InlineKeyboardButton(text="500 звёзд — 460 грн", callback_data="pack_500")],
+        [InlineKeyboardButton(text="1000 звёзд — 899 грн", callback_data="pack_1000")],
+        [InlineKeyboardButton(text="2000 звёзд — 1750 грн", callback_data="pack_2000")],
+        [InlineKeyboardButton(text="5000 звёзд — 4300 грн", callback_data="pack_5000")],
         [InlineKeyboardButton(text="10000 звёзд — 8500 грн", callback_data="pack_10000")],
         [InlineKeyboardButton(text="⬅️ Назад", callback_data="back")]
     ])
